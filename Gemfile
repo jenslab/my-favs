@@ -9,6 +9,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'letter_opener'
 end
 
 gem 'sass-rails', '~> 5.0'
@@ -30,6 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #My Gems
 gem 'bootstrap-sass'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
