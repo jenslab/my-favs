@@ -22,6 +22,7 @@ class IncomingController < ApplicationController
       user = User.new(email: sender_email, password: 'helloworld')
       user.save!
     end
+    
      # Check if the topic is nil, if so, create and save a new topic
      if topic.nil?
       topic = Topic.new(title: 'Others')
@@ -29,7 +30,7 @@ class IncomingController < ApplicationController
     end
 
      # Now that we're sure we have a valid user and topic, build and save a new bookmark
-     bookmark = topic.bookmarks.create(url: url, user: user)
+     bookmark = topic.bookmarks.create(url: url)
 
     # Assuming all went well.
     head 200
