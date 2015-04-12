@@ -19,7 +19,7 @@ class IncomingController < ApplicationController
 
      # Check if user is nil, if so, create and save a new user
      if user.nil?
-      user = User.new(email: sender_email, password: 'helloworld')
+      user = User.new(nickname: Guest, email: sender_email, password: 'helloworld')
       user.save!
     end
     

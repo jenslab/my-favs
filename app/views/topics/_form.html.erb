@@ -1,0 +1,7 @@
+<% if current_user%>
+<h4>Create a topic:</h4>
+<%= form_for [@topic, @topics.build] do |f| %>
+<%= f.text_area :title, placeholder: "Enter topic here" %>
+<%= f.submit "Save" %>
+<% end %>
+<% end %>
