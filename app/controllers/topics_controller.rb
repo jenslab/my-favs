@@ -6,6 +6,7 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @title = @topic.title
+    @bookmark = @topic.bookmarks
     
   end
 
