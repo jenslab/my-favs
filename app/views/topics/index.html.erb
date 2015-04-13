@@ -1,6 +1,10 @@
 <h1>Topics</h1>
 <p>Send an e-mail to postmaster@app4231fc923763453e9611700de2197df9.mailgun.org. The subject will be the topic and your url will create a new bookmark in that subject. Give it a try!</p>
 
+
 <%= render 'form'%>
+<%= Bookmark.count %>
 <%= render @topics %>
+
+
 
