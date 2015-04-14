@@ -10,6 +10,7 @@ end
 #Create Bookmarks
 50.times do
   Bookmark.create!(
+    topic_id: Topic.all.sample.id, 
     url: Faker::Internet.url
     )
 end
