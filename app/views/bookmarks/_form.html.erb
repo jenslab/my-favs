@@ -1,0 +1,7 @@
+<% if current_user%>
+<h4>Create a bookmark:</h4>
+<%= form_for [@topic, @topic.bookmarks.build] do |f| %>
+<%= f.text_area :url, placeholder: "Enter bookmark here" %>
+<%= f.submit "Save" %>
+<% end %>
+<% end %>
