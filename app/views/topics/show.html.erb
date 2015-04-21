@@ -1,6 +1,6 @@
 <h1>Bookmarks about <%= "#{@title}"%></h1>
-<%= link_to "Back to topics", topics_path %>
 <%= render partial: 'bookmarks/form'%>
-<%= render partial: 'bookmarks/bookmarks', collection: @bookmarks %>
+<%= link_to "Back to topics", topics_path %>
+<%= render @bookmarks, topic: @topic %>
 
 

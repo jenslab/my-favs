@@ -1,4 +1,9 @@
-<p>#<%= link_to topic.title.capitalize, topic %>
-<%= link_to "Delete Topic", [@topic, topic], method: :delete, data: { confirm: 'Are you sure you want to delete this topic?' } %> 
-</p>
-<%= topic.bookmarks.count%>
+<div class= "topic">
+  <p class= "hashtag">#<%= link_to topic.title.capitalize, topic %></p>
+<span class= "bookmarks">
+  <span class= "glyphicon glyphicon-heart-empty"></span> 
+  <%= topic.bookmarks.count%> Bookmarks
+  </span></br>
+<span class= "delete"> <%= link_to "Delete Topic", [@topic, topic], method: :delete, data: { confirm: 'Are you sure you want to delete this topic?' } %> </span>
+<br/>
+</div>

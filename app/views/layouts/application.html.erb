@@ -5,36 +5,48 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
+<div class="container">
+
+
   <% if flash[:notice] %>
-         <div class="alert alert-success">
-           <button type="button" class="close" data-dismiss="alert">&times;</button>
-           <%= flash[:notice] %>
-         </div>
-       <% elsif flash[:error] %>
-         <div class="alert alert-danger">
-           <button type="button" class="close" data-dismiss="alert">&times;</button>
-           <%= flash[:error] %>
-         </div>
-       <% elsif flash[:alert] %>
-         <div class="alert alert-warning">
-           <button type="button" class="close" data-dismiss="alert">&times;</button>
-           <%= flash[:alert] %>
-         </div>
-       <% end %>
+    <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:notice] %>
+    </div>
+  <% elsif flash[:error] %>
+    <div class="alert alert-danger">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:error] %>
+    </div>
+  <% elsif flash[:alert] %>
+    <div class="alert alert-warning">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
 
-  <% if current_user %>
-    Hey <%= current_user.email%>!
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
-    <%= link_to "Sign In", new_user_session_path %> or 
-    <%= link_to "Sign Up", new_user_registration_path %>
-    <% end %>
-        
-
+  <div class="masthead">
+    <nav>
+   <span class="brand"> My Favs </span> 
+   <span class= "glyphicon glyphicon-heart-empty"></span>
+    <div class="pull-right user-info">
+      <% if current_user %>
+        <span class="user">Hey <%= current_user.name%>!
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %></span>
+      <% else %>
+        <%= link_to "Sign In", new_user_session_path %>
+      <% end %>
+    </div>
+  </nav>
+  </div>
+   
 <%= yield %>
+
+</div>   
 
 </body>
 </html>

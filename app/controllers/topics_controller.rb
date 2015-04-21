@@ -14,7 +14,7 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.new(params.require(:topic).permit(:title))
+    @topic = current_user.topics.build(params.require(:topic).permit(:title))
 
     if @topic.save
       redirect_to topics_path, notice: "Topic was saved!"

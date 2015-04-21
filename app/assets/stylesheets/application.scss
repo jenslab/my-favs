@@ -3,4 +3,128 @@
  *= require_self
  */
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  padding-top: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+i {
+  color: rgb(255, 0, 102);
+}
+
+.small {
+  font-size: 12px;
+}
+
+/* Header */
+.brand {
+  font-size: 26px;
+  font-family: 'Ubuntu', sans-serif;
+  color: rgb(204, 0, 102);
+  padding-left: 10px;
+}
+
+.masthead {
+  background-color: rgba(102, 153, 153, 0.1);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.user-info {
+  padding-right: 15px;
+  padding-top: 10px;
+}
+
+/* Form */
+.form-control {
+  width: 100%;
+}
+
+.topic_form {
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(102, 17, 65, 0.3);
+  border-radius: 4px;
+}
+
+/* Topics and Bookmarks */
+
+.instructions {
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 40px;
+  font-size: 18px;
+}
+
+.topic {
+font-size: 24px;
+background-color: rgba(178, 178, 178, 0.1);
+margin: 20px;
+display: inline-block;
+border-radius: 4px;
+padding: 4px;
+text-align: center;
+}
+
+.hashtag {
+  color: rgb(204, 0, 102);
+
+}
+
+.bookmarks {
+  font-size: 16px;
+}
+
+.delete {
+  font-size: 12px;
+}
+
+.url {
+  margin-top: 10px;
+  background-color: transparent;
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  margin-top: 70px;
+  background-color: transparent;
+  font-family: 'Ubuntu', sans-serif;  
+}
+
+.text {
+  font-size: 24px;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
