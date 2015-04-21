@@ -1,11 +1,8 @@
 class BookmarksController < ApplicationController
-  def show
-    @topic = Topic.find(params[:id])
-    @bookmarks = @topic.bookmarks
-  end
+
 
   def new
-    @topic = Topic.finc(params[:topic_id])
+    @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.new
   end
 
@@ -18,7 +15,7 @@ class BookmarksController < ApplicationController
       redirect_to @topic, notice: "Bookmark was saved!"
     else
       flash[:error] = "Ooops, couldn't save your new bookmark. Please try again later."
-      render :new
+      render :show
     end
   end
 
@@ -32,7 +29,7 @@ class BookmarksController < ApplicationController
 
     if @bookmark.destroy
       flash[:notice] = "Your bookmark was deleted successfully."
-      redirect_to @topic
+      redirect_to topics_path
     else
       flash[:error] = "Ooops, couldn't delete the bookmark. Please try again later."
       render :show

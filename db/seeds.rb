@@ -1,7 +1,7 @@
 require 'faker'
 
 #Create Topics
-0.times do 
+5.times do 
   Topic.create!(
     title: Faker::Lorem.word
     )
