@@ -14,7 +14,7 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = current_user.topics.build(params.require(:topic).permit(:title))
+    @topic = current_user.topics.build(topic_params)
 
     if @topic.save
       redirect_to topics_path, notice: "Topic was saved!"
@@ -25,6 +25,18 @@ class TopicsController < ApplicationController
   end
 
   def edit
+    @topic = Topic.find(params[:id])
+  end
+
+  def update
+    @topic = Topic.find(params[:id])
+
+    if @topic.update_attributes(topic_params)
+      redirect_to topics_path, notice: "Topic was updated!"
+    else
+      flash[:error] = "Oooops, couldn't update your topic. Please try again later."
+      render :edit
+    end
   end
 
   def destroy
@@ -38,5 +50,11 @@ class TopicsController < ApplicationController
       flash[:error] = "ooops, couldn't delete the topic. Please try again later."
       render :index
     end
+  end
+
+  private
+  
+  def topic_params
+    params.require(:topic).permit(:title)
   end
 end

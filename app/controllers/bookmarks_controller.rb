@@ -8,7 +8,7 @@ class BookmarksController < ApplicationController
 
   def create
   @topic = Topic.find(params[:topic_id])
-  @bookmark = current_user.bookmarks.build(params.require(:bookmark).permit(:url))
+  @bookmark = current_user.bookmarks.build(bookmark_params)
   @bookmark.topic = @topic
 
     if @bookmark.save
@@ -20,6 +20,20 @@ class BookmarksController < ApplicationController
   end
 
   def edit
+  @topic = Topic.find(params[:topic_id])
+  @bookmark = Bookmark.find(params[:id])
+  end
+
+  def update
+    @topic = Topic.find(params[:topic_id])
+    @bookmark = Bookmark.find(params[:id])
+
+    if @bookmark.update_attributes(bookmark_params)
+      redirect_to @topic, notice: "Topic was updated!"
+    else
+      flash[:error] = "Oooops, couldn't update your topic. Please try again later."
+      render :edit
+    end
   end
 
   def destroy
@@ -34,5 +48,11 @@ class BookmarksController < ApplicationController
       flash[:error] = "Ooops, couldn't delete the bookmark. Please try again later."
       render :show
     end
+  end
+
+  private
+
+  def bookmark_params
+    params.require(:bookmark).permit(:url)
   end
 end

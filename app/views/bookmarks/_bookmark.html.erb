@@ -1,7 +1,6 @@
-<div class="url">
+<!-- <div class="url"> -->
 <p><%= bookmark.url  %></p>
-<span class="delete"> 
   <%= link_to "Delete bookmark", topic_bookmark_path(topic, bookmark), method: :delete %>
-</span>
-</div>
+<%= link_to "Update bookmark", edit_topic_bookmark_path(topic, bookmark) %>
+<!-- </div> -->
 

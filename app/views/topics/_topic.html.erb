@@ -6,4 +6,5 @@
   </span></br>
 <span class= "delete"> <%= link_to "Delete Topic", [@topic, topic], method: :delete, data: { confirm: 'Are you sure you want to delete this topic?' } %> </span>
 <br/>
+<span class= "edit"><%= link_to "Edit Topic", edit_topic_path(topic) %></span>
 </div>
