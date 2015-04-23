@@ -4,7 +4,9 @@
   <span class= "glyphicon glyphicon-heart-empty"></span> 
   <%= topic.bookmarks.count%> Bookmarks
   </span></br>
+<%if policy(topic).destroy? && topic.bookmarks.count == 0 %>
 <span class= "delete"> <%= link_to "Delete Topic", [@topic, topic], method: :delete, data: { confirm: 'Are you sure you want to delete this topic?' } %> </span>
 <br/>
+<% end %>
 <span class= "edit"><%= link_to "Edit Topic", edit_topic_path(topic) %></span>
 </div>
