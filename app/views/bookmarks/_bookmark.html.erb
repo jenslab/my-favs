@@ -1,5 +1,5 @@
 <!-- <div class="url"> -->
-<p><%= bookmark.url  %></p>
+<p><%= link_to "#{bookmark.url}", "http://#{bookmark.url}", target: "_blank" %></p>
 <% if policy(bookmark).destroy?%>
   <%= link_to "Delete bookmark", topic_bookmark_path(topic, bookmark), method: :delete %>
   <% end %>

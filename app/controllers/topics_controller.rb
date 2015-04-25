@@ -1,5 +1,7 @@
 class TopicsController < ApplicationController
-  def index
+ before_action :authenticate_user!
+ 
+  def index  
     @topics = Topic.all.includes(:bookmarks)
   end
 

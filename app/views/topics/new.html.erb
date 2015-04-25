@@ -1,2 +1,17 @@
-<h1>Topics#new</h1>
-<p>Find me in app/views/topics/new.html.erb</p>
+<h4>Create a new topic </h4>
+
+<div class="row">
+  <div class="col-md-4">
+    <p>Guidelines for topics</p>
+    <ul>
+      <li>The name has to be original (this means it should not exist already in the topic list.)</li>
+      <li> The topic can only have numbers and/or letters </li>
+      <li> The topic cannot be blank </li>
+    </ul>
+  </div>
+<%= render partial: 'form', locals: {topic: @topic} %>
+</div>
+<%= link_to "Back to Topics", root_path %>
+<div>
+   <h5>List of all the current topics</h5>
+</div>
