@@ -1,5 +1,5 @@
-<h4>Create a new topic </h4>
-
+<div class="container">
+<h1>Create a new topic </h1><br/>
 <div class="row">
   <div class="col-md-4">
     <p>Guidelines for topics</p>
@@ -11,7 +11,6 @@
   </div>
 <%= render partial: 'form', locals: {topic: @topic} %>
 </div>
-<%= link_to "Back to Topics", root_path %>
-<div>
-   <h5>List of all the current topics</h5>
+<span class="link"><%= link_to "Back to Topics", root_path %></span>
 </div>
+

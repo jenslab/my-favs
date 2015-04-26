@@ -1,6 +1,9 @@
-<h1>Bookmarks about <%= "#{@title}"%></h1>
-<%= render partial: 'bookmarks/form'%>
-<%= link_to "Back to topics", topics_path %>
+<h1>Bookmarks about <span class="color"><%= "#{@title.capitalize}"%></span></h1>
+
+<div class="link_two"><%= link_to "Back to topics", topics_path %></div><br/>
+<div class="new"><%= link_to "New bookmark", new_topic_bookmark_path(@topic)%></div><br/>
+
 <%= render @bookmarks, topic: @topic %>
+<%= will_paginate @bookmarks %>
 
 

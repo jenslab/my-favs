@@ -2,13 +2,13 @@ class TopicsController < ApplicationController
  before_action :authenticate_user!
  
   def index  
-    @topics = Topic.all.includes(:bookmarks)
+    @topics = Topic.paginate(page: params[:page], per_page: 10).includes(:bookmarks)
   end
 
   def show
     @topic = Topic.find(params[:id])
     @title = @topic.title
-    @bookmarks = @topic.bookmarks
+    @bookmarks = @topic.bookmarks.paginate(page: params[:page], per_page: 15)
   end
 
   def new

@@ -12,22 +12,28 @@ body {
 
 h1 {
   text-align: center;
+  font-family: 'Indie Flower', cursive;
 }
 
-i {
-  color: rgb(255, 0, 102);
-}
-
-.small {
-  font-size: 12px;
+.link_two a {
+  color: rgb(204, 0, 102);
+  background-color: rgba(178, 178, 178, 0.3);
+  border-radius: 4px;
+  padding: 4px;
+  text-decoration: none;
+  margin-left: 20px;
+  float: right;
+  font-family: 'Indie Flower', cursive;
+  font-size: 18px;
 }
 
 /* Header */
-.brand {
+.brand a {
   font-size: 26px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Indie Flower', cursive;
   color: rgb(204, 0, 102);
   padding-left: 10px;
+  text-decoration: none;
 }
 
 .masthead {
@@ -55,7 +61,7 @@ i {
   border-radius: 4px;
 }
 
-/* Topics and Bookmarks */
+/* Topics index */
 
 .instructions {
   background-color: transparent;
@@ -65,40 +71,85 @@ i {
   font-size: 18px;
 }
 
+i {
+  color: rgb(255, 0, 102);
+}
+
+.small {
+  font-size: 12px;
+}
+
+.new {
+  background-color: rgba(102, 153, 153, 0.1);
+  border-radius: 4px;
+  padding: 4px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 18px;
+  width: 10%;
+  text-align: center;
+}
+
+  .new a {
+  color: rgb(204, 0, 102);
+  text-decoration: none;
+  }
+
 .topic {
 font-size: 24px;
 background-color: rgba(178, 178, 178, 0.1);
 margin: 20px;
-display: inline-block;
 border-radius: 4px;
-padding: 4px;
+padding: 6px;
 text-align: center;
+display: inline-block;
+height: 120px;
 }
 
-.hashtag {
+  .hashtag {
   color: rgb(204, 0, 102);
+  font-family: 'Indie Flower', cursive;
+  font-size: 32px;
+  }
 
-}
+    .hashtag a {
+    text-decoration: none;
+    }
 
-.bookmarks {
-  font-size: 16px;
-}
-
-.delete {
+  .edit a {
   font-size: 12px;
+  }
+
+  .bookmarks {
+  font-size: 12px;
+  }
+
+  .delete a {
+  font-size: 12px;
+  color: rgb(204, 0, 0);
+  clear: both;
+  }
+
+
+/* Topics#show */
+
+.color{
+  color: rgb(204, 0, 102);
 }
 
-.edit {
-  font-size: 16px;
+.bookmark a {
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.url {
-  margin-top: 10px;
-  background-color: transparent;
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
-}
+  .edit_b a {
+  font-size: 12px;
+  }
+
+ .delete_b a {
+  font-size: 12px;
+  color: rgb(204, 0, 0);
+  clear: both;
+  }
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -112,14 +163,6 @@ text-align: center;
   font-size: 24px;
   background-color: transparent;
   border-radius: 4px;
-}
-
-
-.footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
 }
 
 /* Responsive: Portrait tablets and up */

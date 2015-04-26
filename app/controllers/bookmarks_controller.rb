@@ -4,6 +4,7 @@ class BookmarksController < ApplicationController
   def new
     @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.new
+    @title = @topic.title
   end
 
   def create
@@ -15,7 +16,7 @@ class BookmarksController < ApplicationController
       redirect_to @topic, notice: "Bookmark was saved!"
     else
       flash[:error] = "Ooops, couldn't save your new bookmark. Please try again later."
-      render :show
+      render :new
     end
   end
 
@@ -23,6 +24,7 @@ class BookmarksController < ApplicationController
   @topic = Topic.find(params[:topic_id])
   @bookmark = Bookmark.find(params[:id])
   authorize @bookmark
+  @title = @topic.title
   end
 
   def update

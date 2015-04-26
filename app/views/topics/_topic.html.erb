@@ -1,12 +1,13 @@
 <div class= "topic">  
-  <p class= "hashtag">#<%= link_to topic.title.capitalize, topic %></p>
-<span class= "bookmarks">
-  <span class= "glyphicon glyphicon-heart-empty"></span> 
-  <%= topic.bookmarks.count%> Bookmarks
-  </span></br>
+  <span class= "hashtag">#<%= link_to topic.title.capitalize, topic %></span> <span class= "edit"><%= link_to " ", edit_topic_path(topic), class: "glyphicon glyphicon-pencil" %></span>
+
 <%if policy(topic).destroy? && topic.bookmarks.count == 0 %>
-<span class= "delete"> <%= link_to "Delete Topic", [@topic, topic], method: :delete, data: { confirm: 'Are you sure you want to delete this topic?' } %> </span>
-<br/>
+  <span class= "delete"> <%= link_to "", [@topic, topic], method: :delete, data: { confirm: 'Are you sure you want to delete this topic?'}, class: "glyphicon glyphicon-remove" %> </span>
 <% end %>
-<span class= "edit"><%= link_to "Edit Topic", edit_topic_path(topic) %></span>
+<br/>
+
+<span class= "bookmarks">
+<span class= "glyphicon glyphicon-heart-empty"></span> 
+<%= topic.bookmarks.count%> Bookmarks
+</span>
 </div>

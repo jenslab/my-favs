@@ -4,7 +4,7 @@ class Topic < ActiveRecord::Base
 
 default_scope { order('title ASC') }
 
-  validates :title, format: {with: /[a-zA-Z0-9]/,
+  validates :title, format: {with: /[a-zA-Z0-9\s]+/,
     message: "only allows letters or numbers" }
 
   validates :title, uniqueness: { case_sensitive: false }

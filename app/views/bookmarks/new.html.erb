@@ -1,2 +1,5 @@
-<h1>Bookmarks#new</h1>
-<p>Find me in app/views/bookmarks/new.html.erb</p>
+<h1>Create a new bookmark for <span class="color"><%= "#{@title.capitalize}"%></span></h1>
+
+<%= render partial: 'bookmarks/form', locals: {topic: @topic, bookmark: @bookmark}%>
+
+

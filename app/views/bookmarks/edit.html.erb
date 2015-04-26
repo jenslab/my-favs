@@ -1,6 +1,3 @@
-<h1>Edit Bookmark</h1>
-<%= form_for [@topic, @bookmark] do |f|%>
-<%= f.text_area :url, placeholder: "Edit topic here"%>
-<%= f.submit "Save" %>
-<% end %>
+<h1>Edit bookmark for <span class="color"><%= "#{@title.capitalize}"%></span></h1>
+<%= render partial: 'bookmarks/form', locals: {topic: @topic, bookmark: @bookmark}%>
 
