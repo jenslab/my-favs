@@ -7,6 +7,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
+    @bookmark = Bookmark.find(params[:id])
     @title = @topic.title
     @bookmarks = @topic.bookmarks.paginate(page: params[:page], per_page: 15)
   end
