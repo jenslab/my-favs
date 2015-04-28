@@ -4,6 +4,7 @@
 <div class="new"><%= link_to "New bookmark", new_topic_bookmark_path(@topic)%></div><br/>
 
 <%= render @bookmarks, topic: @topic %>
+  
 <%= will_paginate @bookmarks %>
 
 
