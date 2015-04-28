@@ -1,7 +1,7 @@
 <ul>
 <li class="bookmark"><%= link_to "#{bookmark.url}", "http://#{bookmark.url}", target: "_blank" %>
 
-<%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+
   
 <% if policy(bookmark).edit? %>
   <span class="edit_b">
