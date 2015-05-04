@@ -1,5 +1,7 @@
 <h1><%= current_user.name %>'s Bookmarks</h1>
 
+ <p><%= link_to "Edit your account information", edit_user_registration_path %></p><br/>
+
 <h4>The bookmarks you have added</h4>
   <% @user_bookmarks.each do |bookmark|%>
   <%= link_to "#{bookmark.url}", "http://#{bookmark.url}", target: "_blank" %>
@@ -10,5 +12,7 @@
   <%= like.bookmark.url %>
     <%= render partial: 'likes/like', locals: { bookmark: like.bookmark } %><br/>
   <% end %>
+
+
 
 
