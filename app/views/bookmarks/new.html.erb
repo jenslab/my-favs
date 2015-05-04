@@ -1,5 +1,7 @@
 <h1>Create a new bookmark for <span class="color"><%= "#{@title.capitalize}"%></span></h1>
 
+<span title="Back to topics" class="link_two"><%= link_to " ", topics_path, class: "glyphicon glyphicon-arrow-left" %></span>
+
 <%= render partial: 'bookmarks/form', locals: {topic: @topic, bookmark: @bookmark}%>
 
 

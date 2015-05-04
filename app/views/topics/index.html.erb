@@ -4,10 +4,11 @@
 <span class="small">P.S. You can also create a topic below :)</span>
 </p>
 
-<div class="new"><%= link_to "New Topic", new_topic_path %></div>
+<span title="add topic" class="new"><%= link_to " ", new_topic_path, class: "glyphicon glyphicon-plus" %></span>
 
 <%= render @topics, topic: @topic %>
 <%= will_paginate @topics %>
+
 
 
 

@@ -36,8 +36,8 @@
    <span class= "glyphicon glyphicon-heart-empty"></span>
     <div class="pull-right user-info">
       <% if current_user %>
-        <span class="user">Hey <%= current_user.name%>!
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete %></span>
+        <span class="user"> Hey <%= link_to current_user.name, user_path(current_user) %>!
+        <%= link_to " ", destroy_user_session_path, class: "glyphicon glyphicon-log-out", method: :delete %></span>
       <% else %>
         <%= link_to "Sign In", new_user_session_path %>
       <% end %>

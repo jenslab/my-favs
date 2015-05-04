@@ -1,7 +1,8 @@
 <h1>Bookmarks about <span class="color"><%= "#{@title.capitalize}"%></span></h1>
 
-<div class="link_two"><%= link_to "Back to topics", topics_path %></div><br/>
-<div class="new"><%= link_to "New bookmark", new_topic_bookmark_path(@topic)%></div><br/>
+<div><span title="Back to topics" class="link_two"><%= link_to " ", topics_path, class: "glyphicon glyphicon-arrow-left" %></span>
+
+<span title="Add a bookmark" class="new"><%= link_to " ", new_topic_bookmark_path(@topic), class: "glyphicon glyphicon-plus"%></span></div><br/>
 
 <%= render @bookmarks, topic: @topic %>
   

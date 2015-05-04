@@ -1,0 +1,14 @@
+<h1><%= current_user.name %>'s Bookmarks</h1>
+
+<h4>The bookmarks you have added</h4>
+  <% @user_bookmarks.each do |bookmark|%>
+  <%= link_to "#{bookmark.url}", "http://#{bookmark.url}", target: "_blank" %>
+  <%= render partial: 'right', locals: {bookmark: bookmark} %> <br/> <% end %><br/>
+
+<h4>Your favorite bookmarks</h4>
+  <% @liked_bookmarks.each do |like|%>
+  <%= like.bookmark.url %>
+    <%= render partial: 'likes/like', locals: { bookmark: like.bookmark } %><br/>
+  <% end %>
+
+
