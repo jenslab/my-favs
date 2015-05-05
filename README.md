@@ -1,4 +1,4 @@
-<h1><%= link_to "My Favs", "https://my-favs.herokuapp.com" %>: Social Bookmarking with Email Integration</h1>
+<h1><a href:"https://my-favs.herokuapp.com/">My Favs</a>: Social Bookmarking with Email Integration</h1>
 
 <h2>Purpose</h2> 
 
