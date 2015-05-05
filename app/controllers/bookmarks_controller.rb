@@ -32,7 +32,7 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.find(params[:id])
   
     if @bookmark.update_attributes(bookmark_params)
-      redirect_to @topic, notice: "Topic was updated!"
+      redirect_to :back, notice: "Topic was updated!"
     else
       flash[:error] = "Oooops, couldn't update your topic. Please try again later."
       render :edit
@@ -47,7 +47,7 @@ class BookmarksController < ApplicationController
 
     if @bookmark.destroy
       flash[:notice] = "Your bookmark was deleted successfully."
-      redirect_to @topic
+      redirect_to :back
     else
       flash[:error] = "Ooops, couldn't delete the bookmark. Please try again later."
       render :show

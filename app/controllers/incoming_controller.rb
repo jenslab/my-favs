@@ -30,7 +30,8 @@ class IncomingController < ApplicationController
     end
 
      # Now that we're sure we have a valid user and topic, build and save a new bookmark
-     bookmark = topic.bookmarks.create(url: url)
+     bookmark = topic.bookmarks.create(url: url, user_id: user.id)
+
 
     # Assuming all went well.
     head 200

@@ -1,8 +1,0 @@
-<% if policy(bookmark).edit? %>
-  <span class="edit_b">
-  <%= link_to " ", edit_bookmark_path(bookmark), class: "glyphicon glyphicon-pencil" %></span>
-  <% end %>
-
-<% if policy(bookmark).destroy?%>
-  <span class="delete_b"><%= link_to " ", bookmark_path(bookmark), method: :delete, class: "glyphicon glyphicon-remove" %>  </span>
-  <% end %>

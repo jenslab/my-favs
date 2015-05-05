@@ -5,7 +5,7 @@
 <h4>The bookmarks you have added</h4>
   <% @user_bookmarks.each do |bookmark|%>
   <%= link_to "#{bookmark.url}", "http://#{bookmark.url}", target: "_blank" %>
-  <%= render partial: 'right', locals: {bookmark: bookmark} %> <br/> <% end %><br/>
+  <%= render partial: 'bookmarks/right', locals: {bookmark: bookmark, topic: bookmark.topic} %> <br/> <% end %><br/>
 
 <h4>Your favorite bookmarks</h4>
   <% @liked_bookmarks.each do |like|%>
