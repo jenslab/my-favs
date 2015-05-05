@@ -24,9 +24,11 @@ The project's user stories are:
 </ol>
 
 <h2>Gems used</h2>
-gem 'bootstrap-sass'
-gem 'devise'
-gem 'figaro', '1.0'
-gem 'faker'
-gem 'pundit'
-gem 'will_paginate', '~> 3.0.5'
+<ul>
+<li>gem 'bootstrap-sass'</li>
+<li>gem 'devise'</li>
+<li>gem 'figaro', '1.0'</li>
+<li>gem 'faker'</li>
+<li>gem 'pundit'</li>
+<li>gem 'will_paginate', '~> 3.0.5'</li>
+</ul>
