@@ -32,3 +32,5 @@ The project's user stories are:
 <li>gem 'pundit'</li>
 <li>gem 'will_paginate', '~> 3.0.5'</li>
 </ul>
+
+<p>This app was created by Jen Palacios @jencios</p>
