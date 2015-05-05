@@ -1,4 +1,4 @@
-<h1>My Favs: Social Bookmarking with Email Integration</h1>
+<h1><%= link_to "My Favs", "https://my-favs.herokuapp.com" %>: Social Bookmarking with Email Integration</h1>
 
 <h2>Purpose</h2> 
 
@@ -23,6 +23,10 @@ The project's user stories are:
 <li>As a user, I want to see a list of bookmarks on my personal profile that I've added or liked.</li>
 </ol>
 
-Gems used
-
-App in Heroku >>
+<h2>Gems used</h2>
+gem 'bootstrap-sass'
+gem 'devise'
+gem 'figaro', '1.0'
+gem 'faker'
+gem 'pundit'
+gem 'will_paginate', '~> 3.0.5'

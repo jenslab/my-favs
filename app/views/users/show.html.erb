@@ -9,7 +9,7 @@
 
 <h4>Your favorite bookmarks</h4>
   <% @liked_bookmarks.each do |like|%>
-  <%= like.bookmark.url %>
+  <%= link_to "#{like.bookmark.url}", "http://#{like.bookmark.url}", target: "_blank" %>
     <%= render partial: 'likes/like', locals: { bookmark: like.bookmark } %><br/>
   <% end %>
 
